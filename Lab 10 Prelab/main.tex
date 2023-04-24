@@ -137,6 +137,40 @@
 
 \begin{document}
 \section*{Question 1}
-% TODO
+In essence this lab is an exercise in \textit{designing} a lab. The objective is to design a structure that simulates an aerostructure, give it some sort of load, and then use the sensors and equipment available to us to test its response. Using the theory we have learned in E M \num{324}, AER E \num{321}, and AER E \num{322}, we should be able to model the responses of the structure and relate the experimental data to theoretical data.
 
+The key concept being practiced in this lab is ``rapid design, prototyping, and learning''. Engineers rarely, if ever, have the time and resources to build full-scale prototypes for testing. Often, we must build scaled models that can help demonstrate key functionalities or pitfalls in a design. From this lab, we will gain experience designing a scaled test and learning how to make sense of the data gleaned from the experiment by using the theory we have learned thus far in our structures courses.
+
+\section*{Question 2}
+\begin{itemize}
+	\item \textbf{wave driver:} The wave driver has a post that oscillates up and down based on the frequency configured in the Capstone software. If the post is placed directly on a structure, it will cause it oscillate. Typically, however, a string is attached to the wave driver post and to the structure and the structure is then vibrated at a given frequency. The software can be configured to steadily increase or decrease the wave driver frequency to find different resonant frequencies in a structure.
+	\item \textbf{load cell:} The load cell is used in combination with the PASCO building beams to measure the tension and compression forces in a structure. By taking the place of a joint, it can accurately measure the force being applied through two beams.
+	\item \textbf{motion sensor:} The motion sensor uses ultrasonic waves---the same technology we employed in our ultrasonic testing experiment in lab nine---to precisely measure the position, velocity, and acceleration of an object at a very high sampling rate. While extremely accurate, the motion sensor needs a large surface to bounce the ultrasonic waves off of.
+	\item \textbf{displacement sensor:} The displacement sensor is similar to the motion sensor, but it only records displacement. It uses a spring-loaded needle that physically, but lightly, touches the structure. When the structure displaces, it moves the needle. The displacement of the needle, which mimics the displacement of the structure, is polled regularly and provides raw displacement data to the Capstone software.
+\end{itemize}
+
+\section*{Question 3}
+Starting with the wave driver, its important not to apply any type of horizontal force to the wave driver arm. Otherwise, using a string attached to the arm, as long as the force is parallel to the arm, you can attach the other end of the string to the structure or position an object in contact with the wave driver to create vibrational forces.
+
+As mentioned in question two, the load cell is designed to be positioned in between two of the PASCO Structure set beams and will measure the tension or compression forces in the beams. It is very important to leave the screws loose so that the load cell only records tension and compression forces without any moment contributions. Additionally, the load cells need to be calibrated with a known weight before being deployed in a structure. This can be done with a hanging mass and a clamp on a table.
+
+Also mentioned in question two, the motion sensor records position, velocity, and acceleration data, but it requires a large surface to bounce the waves off of. If the surface is too thin, \eg a thin beam or column, the waves will scatter to widely and the sensor will be unable to get clean readings. One way around this to attach a large, but thin in depth, piece of foam or other lightweight, opaque material that will reflect the ultrasonic waves. Additionally, the ultrasonic sensor must be at least \qty{15}{\cm} away from the target at all times. Again, zeroing and calibrating the device regularly before testing is imperative for clean results.
+
+The displacement sensor is one of the simpler sensors, but it is very picky about how its positioned before a test begins. If the beam or structure is going to oscillate or displace up and down, it is very important that the displacement needle be placed and zeroed in such a way that it has room to move up and down to record both positive and negative displacements, \ie it should be loaded at \qty{50}{\percent} before testing. If the displacement is only going to occur in one direction, the displacement needle must be configured so that the displacement needle remains in contact with the structure at all points during the test. Like the motion sensor, the displacement sensor should be calibrated constantly, preferably after each test.
+
+\section*{Question 4}
+\qty{15}{\percent} of our grade is creativity, \ie we won't get many points for exactly replicating a lab we already did this semester. This lab should be an opportunity for us to combine multiple ideas, theories, and tools into a more complex test and subsequent analysis.
+
+On that note, \qty{10}{\percent} of our grade is complexity. This criteria measures how complicated our model, testing infrastructure, and the post-analysis were. Again, the exercise is meant to push the boundaries of scaled structures testing while utilizing our existing knowledge.
+
+As described briefly in question one, \qty{10}{\percent} of our grade will be judged on the comparisons or similarities we can draw between our structure and real aerostructures.
+
+The largest chunk of our lab grade, however, relates to our results and analysis. This part of the report makes up \qty{40}{\percent} of our grade. To get maximum points, it is crucial to go into the lab with a clear objective and hypothesis. The sensors and tools we use in the lab should provide ample data to perform a thorough analysis of the structure and enable us to use related theory to confirm or reject the analyses.
+
+Lastly, \qty{25}{\percent} of the lab grade is assigned to the report and optional presentation. The report will follow the traditional lab report format with a few additional sections describing the nuances of this lab not present in previous labs. Additionally, an extra \qty{10}{\percent} will be awarded to groups or teams that go above and beyond to create a video presentation that demonstrates the lab and their results---or something similar.
+
+\section*{Question 5}
+Our group has not completely decided what we want our lab experiment to be, however, we tossed around several ideas. First, we have considered building a trussed-structure that resembles a wing and instead of exposing it to damped oscillations with the wave driver below the wing, we would design a simple lever that would attach to the wave driver and the wing model to apply the oscillatory forces \textit{upward} rather than downward. This may better simulate flight conditions since excessive airflow or gusts are likely to add more lift to the wing, not less. With this experiment, it would be useful to include several thoughtfully placed load cells, one or more masses hanging from the structure to simulate damped oscillations, and of course, a displacement sensor or motion sensor to record the actual movement of the structure.
+
+We also discussed using the load cells to measure the internal forces felt by a model landing gear as it makes contact with the ground. This would utilize the load cells tor measuring the internal forces, but we may also be able to use the motion sensor at the time of impact with the ground to measure whether any deformation occurred when the gear landed.
 \end{document}
