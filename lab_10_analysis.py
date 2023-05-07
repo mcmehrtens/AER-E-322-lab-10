@@ -98,12 +98,12 @@ def remove_baseline(data_frame):
     return data_frame_no_baseline
 
 def smooth_data(data_frame, window_size):
-    """Applies a simple moving average filter to the F_1, F_2, F_3, and F_4
-    columns of the given DataFrame.
+    """Applies a simple moving average filter to the F_1, F_2, F_3, and
+        F_4 columns of the given DataFrame.
 
     Args:
-        data_frame (pandas.DataFrame): Dataframe containing time and force
-            data.
+        data_frame (pandas.DataFrame): Dataframe containing time and
+            force data.
         window_size (int): Size of the window to use for the SMA filter.
 
     Returns:
@@ -118,37 +118,42 @@ def smooth_data(data_frame, window_size):
     return data_frame_smoothed
 
 def calculate_frequency(data_frame):
-    """Calculates the frequency of oscillation in each of the F_1, F_2, F_3, and F_4 datasets for a given pandas dataframe.
+    """Calculates the frequency of oscillation in each of the F_1, F_2,
+        F_3, and F_4 datasets for a given pandas dataframe.
 
     Args:
-        data_frame (pandas.DataFrame): Dataframe containing time and force data.
+        data_frame (pandas.DataFrame): Dataframe containing time and
+            force data.
 
     Returns:
-        freq_df (pandas.DataFrame): Dataframe containing the frequency of oscillation in each of the F_1, F_2, F_3, and F_4 datasets.
+        fft_df (pandas.DataFrame): Dataframe containing the frequency
+            and amplitude of oscillation in each of the F_1, F_2, F_3,
+            and F_4 datasets.
     """
     # Select the relevant columns
     data_frame = data_frame[["t", "F_1", "F_2", "F_3", "F_4"]]
 
     # Compute the sampling frequency
     delta_t = data_frame["t"][1] - data_frame["t"][0]
-    Fs = 1/delta_t
+    sampling_freq = 1/delta_t
 
     # Apply FFT to each column
-    freq_df = pd.DataFrame()
+    fft_df = pd.DataFrame()
     for col in data_frame.columns[1:]:
-        y = data_frame[col]
-        N = len(y)
-        Y = np.fft.fft(y)
-        P2 = np.abs(Y/N)
-        P1 = P2[:int(N/2)+1]
-        P1[1:-1] = 2*P1[1:-1]
-        f = Fs*np.arange(0,int(N/2)+1)/N
-        freq = f[np.argmax(P1)]
-        freq_df[col] = [freq]
+        force = data_frame[col]
+        num_points = len(force)
+        fft_result = np.fft.fft(force)
+        two_sided_psd = np.abs(fft_result / num_points)
+        one_sided_psd = two_sided_psd[:int(num_points / 2) + 1]
+        one_sided_psd[1:-1] = 2 * one_sided_psd[1:-1]
+        fft_freq = \
+            sampling_freq * np.arange(0, int(num_points / 2) + 1) / num_points
+        main_freq = fft_freq[np.argmax(one_sided_psd)]
+        amplitude = np.max(one_sided_psd) * 2
+        fft_df[col] = [main_freq, amplitude]
 
-    freq_df.index = ['frequency']
-
-    return freq_df
+    fft_df.index = ['frequency', 'amplitude']
+    return fft_df
 
 def main():
     """Main function for Lab 10 analysis script."""
@@ -167,39 +172,44 @@ def main():
             # Graph the data with the baseline removed
             graph_data(data_frame_no_baseline, test_num + 1, run_num + 1,
                        OUTPUT_PATH, "Baseline Removed")
-            
+
             # Graph the data with the baseline removed from 5 s to 10 s
             graph_data(data_frame_no_baseline.loc[100:201],
                        test_num + 1, run_num + 1, OUTPUT_PATH,
                        "Baseline Removed - 5 s to 10 s")
-            
+
             # Graph the data with the baseline removed from 5 s to 6 s
             graph_data(data_frame_no_baseline.loc[100:121],
                        test_num + 1, run_num + 1, OUTPUT_PATH,
                        "Baseline Removed - 5 s to 6 s")
-            
+
             # Graph the smoothed data with the baseline removed
             graph_data(smooth_data(data_frame_no_baseline, 3), test_num + 1,
                        run_num + 1, OUTPUT_PATH, "Smoothed - Baseline Removed")
-            
-            # Graph the smoothed data with the baseline removed from 5 s to
-            # 10 s
+
+            # Graph the smoothed data with the baseline removed from 5 s
+            # to 10 s
             graph_data(smooth_data(data_frame_no_baseline.loc[100:201], 3),
                        test_num + 1, run_num + 1, OUTPUT_PATH,
                        "Smoothed - Baseline Removed - 5 s to 10 s")
-            
-            # Graph the smoothed data with the baseline removed from 5 s to 6 s
+
+            # Graph the smoothed data with the baseline removed from 5 s
+            # to 6 s
             graph_data(smooth_data(data_frame_no_baseline.loc[100:121], 3),
                        test_num + 1, run_num + 1, OUTPUT_PATH,
                        "Smoothed - Baseline Removed - 5 s to 6 s")
-            
+
             # Calculate the frequency of oscillation
-            freq_df = calculate_frequency(data_frame_no_baseline)
+            fft_df = calculate_frequency(data_frame_no_baseline)
             print(f"Test {test_num + 1}, Run {run_num + 1}:\n"
-                  f"F_1 Frequency: {freq_df['F_1'][0]:.2f} Hz\n"
-                  f"F_2 Frequency: {freq_df['F_2'][0]:.2f} Hz\n"
-                  f"F_3 Frequency: {freq_df['F_3'][0]:.2f} Hz\n"
-                  f"F_4 Frequency: {freq_df['F_4'][0]:.2f} Hz\n\n")
+                  f"F_1 Frequency: {fft_df['F_1'][0]:.2f} Hz | "
+                  f"F_1 Amplitude: {fft_df['F_1'][1]:.2f} N\n"
+                  f"F_2 Frequency: {fft_df['F_2'][0]:.2f} Hz | "
+                  f"F_2 Amplitude: {fft_df['F_2'][1]:.2f} N\n"
+                  f"F_3 Frequency: {fft_df['F_3'][0]:.2f} Hz | "
+                  f"F_3 Amplitude: {fft_df['F_3'][1]:.2f} N\n"
+                  f"F_4 Frequency: {fft_df['F_4'][0]:.2f} Hz | "
+                  f"F_4 Amplitude: {fft_df['F_4'][1]:.2f} N\n\n")
 
 if __name__ == "__main__":
     main()
