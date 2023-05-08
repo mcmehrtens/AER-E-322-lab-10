@@ -153,6 +153,9 @@
 \fancyhead[R]{\textbf{Spring 2023}}
 \fancyfoot[C]{\thepage}
 
+\maxdeadcycles=1000
+\extrafloats{100}
+
 \begin{document}
 \maketitle
 \tableofcontents
@@ -638,6 +641,495 @@ We learned that depending on how the external force is applied to a structure, b
 \chapter{Code} \label{code}
 \lstinputlisting[label={code:full_script}, caption={Source code from the Lab \num{10} analysis script.},language=Python]{src/lab_10_analysis.py}
 
+\chapter{Graphs} \label{graphs}
+\begin{figure}[htbp]
+	\centering
+	\includesvg[width=3.8in]{images/graphs/force-vs-time-test-1-run-1}
+	\caption{Graph output by the analysis script.}
+	\label{fig:force-vs-time-test-1-run-1}
+\end{figure}
 
+\begin{figure}[htbp]
+	\centering
+	\includesvg[width=3.8in]{images/graphs/force-vs-time-test-1-run-2}
+	\caption{Graph output by the analysis script.}
+	\label{fig:force-vs-time-test-1-run-2}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includesvg[width=3.8in]{images/graphs/force-vs-time-test-1-run-3}
+	\caption{Graph output by the analysis script.}
+	\label{fig:force-vs-time-test-1-run-3}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includesvg[width=3.8in]{images/graphs/force-vs-time-test-1-run-4}
+	\caption{Graph output by the analysis script.}
+	\label{fig:force-vs-time-test-1-run-4}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includesvg[width=3.8in]{images/graphs/force-vs-time-test-1-run-5}
+	\caption{Graph output by the analysis script.}
+	\label{fig:force-vs-time-test-1-run-5}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includesvg[width=3.8in]{images/graphs/force-vs-time-test-2-run-1}
+	\caption{Graph output by the analysis script.}
+	\label{fig:force-vs-time-test-2-run-1}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includesvg[width=3.8in]{images/graphs/force-vs-time-test-2-run-2}
+	\caption{Graph output by the analysis script.}
+	\label{fig:force-vs-time-test-2-run-2}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includesvg[width=3.8in]{images/graphs/force-vs-time-test-2-run-3}
+	\caption{Graph output by the analysis script.}
+	\label{fig:force-vs-time-test-2-run-3}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includesvg[width=3.8in]{images/graphs/force-vs-time-test-2-run-4}
+	\caption{Graph output by the analysis script.}
+	\label{fig:force-vs-time-test-2-run-4}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includesvg[width=3.8in]{images/graphs/force-vs-time-test-2-run-5}
+	\caption{Graph output by the analysis script.}
+	\label{fig:force-vs-time-test-2-run-5}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includesvg[width=3.8in]{images/graphs/force-vs-time-baseline-removed-test-1-run-1}
+	\caption{Graph output by the analysis script.}
+	\label{fig:force-vs-time-baseline-removed-test-1-run-1}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includesvg[width=3.8in]{images/graphs/force-vs-time-baseline-removed-test-1-run-2}
+	\caption{Graph output by the analysis script.}
+	\label{fig:force-vs-time-baseline-removed-test-1-run-2}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includesvg[width=3.8in]{images/graphs/force-vs-time-baseline-removed-test-1-run-3}
+	\caption{Graph output by the analysis script.}
+	\label{fig:force-vs-time-baseline-removed-test-1-run-3}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includesvg[width=3.8in]{images/graphs/force-vs-time-baseline-removed-test-1-run-4}
+	\caption{Graph output by the analysis script.}
+	\label{fig:force-vs-time-baseline-removed-test-1-run-4}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includesvg[width=3.8in]{images/graphs/force-vs-time-baseline-removed-test-1-run-5}
+	\caption{Graph output by the analysis script.}
+	\label{fig:force-vs-time-baseline-removed-test-1-run-5}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includesvg[width=3.8in]{images/graphs/force-vs-time-baseline-removed-test-2-run-1}
+	\caption{Graph output by the analysis script.}
+	\label{fig:force-vs-time-baseline-removed-test-2-run-1}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includesvg[width=3.8in]{images/graphs/force-vs-time-baseline-removed-test-2-run-2}
+	\caption{Graph output by the analysis script.}
+	\label{fig:force-vs-time-baseline-removed-test-2-run-2}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includesvg[width=3.8in]{images/graphs/force-vs-time-baseline-removed-test-2-run-3}
+	\caption{Graph output by the analysis script.}
+	\label{fig:force-vs-time-baseline-removed-test-2-run-3}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includesvg[width=3.8in]{images/graphs/force-vs-time-baseline-removed-test-2-run-4}
+	\caption{Graph output by the analysis script.}
+	\label{fig:force-vs-time-baseline-removed-test-2-run-4}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includesvg[width=3.8in]{images/graphs/force-vs-time-baseline-removed-test-2-run-5}
+	\caption{Graph output by the analysis script.}
+	\label{fig:force-vs-time-baseline-removed-test-2-run-5}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includesvg[width=3.8in]{images/graphs/force-vs-time-smoothed-baseline-removed-test-1-run-1}
+	\caption{Graph output by the analysis script.}
+	\label{fig:force-vs-time-smoothed-baseline-removed-test-1-run-1}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includesvg[width=3.8in]{images/graphs/force-vs-time-smoothed-baseline-removed-test-1-run-2}
+	\caption{Graph output by the analysis script.}
+	\label{fig:force-vs-time-smoothed-baseline-removed-test-1-run-2}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includesvg[width=3.8in]{images/graphs/force-vs-time-smoothed-baseline-removed-test-1-run-3}
+	\caption{Graph output by the analysis script.}
+	\label{fig:force-vs-time-smoothed-baseline-removed-test-1-run-3}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includesvg[width=3.8in]{images/graphs/force-vs-time-smoothed-baseline-removed-test-1-run-4}
+	\caption{Graph output by the analysis script.}
+	\label{fig:force-vs-time-smoothed-baseline-removed-test-1-run-4}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includesvg[width=3.8in]{images/graphs/force-vs-time-smoothed-baseline-removed-test-1-run-5}
+	\caption{Graph output by the analysis script.}
+	\label{fig:force-vs-time-smoothed-baseline-removed-test-1-run-5}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includesvg[width=3.8in]{images/graphs/force-vs-time-smoothed-baseline-removed-test-2-run-1}
+	\caption{Graph output by the analysis script.}
+	\label{fig:force-vs-time-smoothed-baseline-removed-test-2-run-1}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includesvg[width=3.8in]{images/graphs/force-vs-time-smoothed-baseline-removed-test-2-run-2}
+	\caption{Graph output by the analysis script.}
+	\label{fig:force-vs-time-smoothed-baseline-removed-test-2-run-2}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includesvg[width=3.8in]{images/graphs/force-vs-time-smoothed-baseline-removed-test-2-run-3}
+	\caption{Graph output by the analysis script.}
+	\label{fig:force-vs-time-smoothed-baseline-removed-test-2-run-3}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includesvg[width=3.8in]{images/graphs/force-vs-time-smoothed-baseline-removed-test-2-run-4}
+	\caption{Graph output by the analysis script.}
+	\label{fig:force-vs-time-smoothed-baseline-removed-test-2-run-4}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includesvg[width=3.8in]{images/graphs/force-vs-time-smoothed-baseline-removed-test-2-run-5}
+	\caption{Graph output by the analysis script.}
+	\label{fig:force-vs-time-smoothed-baseline-removed-test-2-run-5}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includesvg[width=3.8in]{images/graphs/force-vs-time-baseline-removed-5-s-to-10-s-test-1-run-1}
+	\caption{Graph output by the analysis script.}
+	\label{fig:force-vs-time-baseline-removed-5-s-to-10-s-test-1-run-1}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includesvg[width=3.8in]{images/graphs/force-vs-time-baseline-removed-5-s-to-10-s-test-1-run-2}
+	\caption{Graph output by the analysis script.}
+	\label{fig:force-vs-time-baseline-removed-5-s-to-10-s-test-1-run-2}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includesvg[width=3.8in]{images/graphs/force-vs-time-baseline-removed-5-s-to-10-s-test-1-run-3}
+	\caption{Graph output by the analysis script.}
+	\label{fig:force-vs-time-baseline-removed-5-s-to-10-s-test-1-run-3}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includesvg[width=3.8in]{images/graphs/force-vs-time-baseline-removed-5-s-to-10-s-test-1-run-4}
+	\caption{Graph output by the analysis script.}
+	\label{fig:force-vs-time-baseline-removed-5-s-to-10-s-test-1-run-4}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includesvg[width=3.8in]{images/graphs/force-vs-time-baseline-removed-5-s-to-10-s-test-1-run-5}
+	\caption{Graph output by the analysis script.}
+	\label{fig:force-vs-time-baseline-removed-5-s-to-10-s-test-1-run-5}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includesvg[width=3.8in]{images/graphs/force-vs-time-baseline-removed-5-s-to-10-s-test-2-run-1}
+	\caption{Graph output by the analysis script.}
+	\label{fig:force-vs-time-baseline-removed-5-s-to-10-s-test-2-run-1}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includesvg[width=3.8in]{images/graphs/force-vs-time-baseline-removed-5-s-to-10-s-test-2-run-2}
+	\caption{Graph output by the analysis script.}
+	\label{fig:force-vs-time-baseline-removed-5-s-to-10-s-test-2-run-2}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includesvg[width=3.8in]{images/graphs/force-vs-time-baseline-removed-5-s-to-10-s-test-2-run-3}
+	\caption{Graph output by the analysis script.}
+	\label{fig:force-vs-time-baseline-removed-5-s-to-10-s-test-2-run-3}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includesvg[width=3.8in]{images/graphs/force-vs-time-baseline-removed-5-s-to-10-s-test-2-run-4}
+	\caption{Graph output by the analysis script.}
+	\label{fig:force-vs-time-baseline-removed-5-s-to-10-s-test-2-run-4}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includesvg[width=3.8in]{images/graphs/force-vs-time-baseline-removed-5-s-to-10-s-test-2-run-5}
+	\caption{Graph output by the analysis script.}
+	\label{fig:force-vs-time-baseline-removed-5-s-to-10-s-test-2-run-5}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includesvg[width=3.8in]{images/graphs/force-vs-time-baseline-removed-5-s-to-6-s-test-1-run-1}
+	\caption{Graph output by the analysis script.}
+	\label{fig:force-vs-time-baseline-removed-5-s-to-6-s-test-1-run-1}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includesvg[width=3.8in]{images/graphs/force-vs-time-baseline-removed-5-s-to-6-s-test-1-run-2}
+	\caption{Graph output by the analysis script.}
+	\label{fig:force-vs-time-baseline-removed-5-s-to-6-s-test-1-run-2}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includesvg[width=3.8in]{images/graphs/force-vs-time-baseline-removed-5-s-to-6-s-test-1-run-3}
+	\caption{Graph output by the analysis script.}
+	\label{fig:force-vs-time-baseline-removed-5-s-to-6-s-test-1-run-3}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includesvg[width=3.8in]{images/graphs/force-vs-time-baseline-removed-5-s-to-6-s-test-1-run-4}
+	\caption{Graph output by the analysis script.}
+	\label{fig:force-vs-time-baseline-removed-5-s-to-6-s-test-1-run-4}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includesvg[width=3.8in]{images/graphs/force-vs-time-baseline-removed-5-s-to-6-s-test-1-run-5}
+	\caption{Graph output by the analysis script.}
+	\label{fig:force-vs-time-baseline-removed-5-s-to-6-s-test-1-run-5}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includesvg[width=3.8in]{images/graphs/force-vs-time-baseline-removed-5-s-to-6-s-test-2-run-1}
+	\caption{Graph output by the analysis script.}
+	\label{fig:force-vs-time-baseline-removed-5-s-to-6-s-test-2-run-1}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includesvg[width=3.8in]{images/graphs/force-vs-time-baseline-removed-5-s-to-6-s-test-2-run-2}
+	\caption{Graph output by the analysis script.}
+	\label{fig:force-vs-time-baseline-removed-5-s-to-6-s-test-2-run-2}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includesvg[width=3.8in]{images/graphs/force-vs-time-baseline-removed-5-s-to-6-s-test-2-run-3}
+	\caption{Graph output by the analysis script.}
+	\label{fig:force-vs-time-baseline-removed-5-s-to-6-s-test-2-run-3}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includesvg[width=3.8in]{images/graphs/force-vs-time-baseline-removed-5-s-to-6-s-test-2-run-4}
+	\caption{Graph output by the analysis script.}
+	\label{fig:force-vs-time-baseline-removed-5-s-to-6-s-test-2-run-4}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includesvg[width=3.8in]{images/graphs/force-vs-time-baseline-removed-5-s-to-6-s-test-2-run-5}
+	\caption{Graph output by the analysis script.}
+	\label{fig:force-vs-time-baseline-removed-5-s-to-6-s-test-2-run-5}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includesvg[width=3.8in]{images/graphs/force-vs-time-smoothed-baseline-removed-5-s-to-10-s-test-1-run-1}
+	\caption{Graph output by the analysis script.}
+	\label{fig:force-vs-time-smoothed-baseline-removed-5-s-to-10-s-test-1-run-1}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includesvg[width=3.8in]{images/graphs/force-vs-time-smoothed-baseline-removed-5-s-to-10-s-test-1-run-2}
+	\caption{Graph output by the analysis script.}
+	\label{fig:force-vs-time-smoothed-baseline-removed-5-s-to-10-s-test-1-run-2}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includesvg[width=3.8in]{images/graphs/force-vs-time-smoothed-baseline-removed-5-s-to-10-s-test-1-run-3}
+	\caption{Graph output by the analysis script.}
+	\label{fig:force-vs-time-smoothed-baseline-removed-5-s-to-10-s-test-1-run-3}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includesvg[width=3.8in]{images/graphs/force-vs-time-smoothed-baseline-removed-5-s-to-10-s-test-1-run-4}
+	\caption{Graph output by the analysis script.}
+	\label{fig:force-vs-time-smoothed-baseline-removed-5-s-to-10-s-test-1-run-4}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includesvg[width=3.8in]{images/graphs/force-vs-time-smoothed-baseline-removed-5-s-to-10-s-test-1-run-5}
+	\caption{Graph output by the analysis script.}
+	\label{fig:force-vs-time-smoothed-baseline-removed-5-s-to-10-s-test-1-run-5}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includesvg[width=3.8in]{images/graphs/force-vs-time-smoothed-baseline-removed-5-s-to-10-s-test-2-run-1}
+	\caption{Graph output by the analysis script.}
+	\label{fig:force-vs-time-smoothed-baseline-removed-5-s-to-10-s-test-2-run-1}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includesvg[width=3.8in]{images/graphs/force-vs-time-smoothed-baseline-removed-5-s-to-10-s-test-2-run-2}
+	\caption{Graph output by the analysis script.}
+	\label{fig:force-vs-time-smoothed-baseline-removed-5-s-to-10-s-test-2-run-2}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includesvg[width=3.8in]{images/graphs/force-vs-time-smoothed-baseline-removed-5-s-to-10-s-test-2-run-3}
+	\caption{Graph output by the analysis script.}
+	\label{fig:force-vs-time-smoothed-baseline-removed-5-s-to-10-s-test-2-run-3}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includesvg[width=3.8in]{images/graphs/force-vs-time-smoothed-baseline-removed-5-s-to-10-s-test-2-run-4}
+	\caption{Graph output by the analysis script.}
+	\label{fig:force-vs-time-smoothed-baseline-removed-5-s-to-10-s-test-2-run-4}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includesvg[width=3.8in]{images/graphs/force-vs-time-smoothed-baseline-removed-5-s-to-10-s-test-2-run-5}
+	\caption{Graph output by the analysis script.}
+	\label{fig:force-vs-time-smoothed-baseline-removed-5-s-to-10-s-test-2-run-5}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includesvg[width=3.8in]{images/graphs/force-vs-time-smoothed-baseline-removed-5-s-to-6-s-test-1-run-1}
+	\caption{Graph output by the analysis script.}
+	\label{fig:force-vs-time-smoothed-baseline-removed-5-s-to-6-s-test-1-run-1}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includesvg[width=3.8in]{images/graphs/force-vs-time-smoothed-baseline-removed-5-s-to-6-s-test-1-run-2}
+	\caption{Graph output by the analysis script.}
+	\label{fig:force-vs-time-smoothed-baseline-removed-5-s-to-6-s-test-1-run-2}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includesvg[width=3.8in]{images/graphs/force-vs-time-smoothed-baseline-removed-5-s-to-6-s-test-1-run-3}
+	\caption{Graph output by the analysis script.}
+	\label{fig:force-vs-time-smoothed-baseline-removed-5-s-to-6-s-test-1-run-3}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includesvg[width=3.8in]{images/graphs/force-vs-time-smoothed-baseline-removed-5-s-to-6-s-test-1-run-4}
+	\caption{Graph output by the analysis script.}
+	\label{fig:force-vs-time-smoothed-baseline-removed-5-s-to-6-s-test-1-run-4}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includesvg[width=3.8in]{images/graphs/force-vs-time-smoothed-baseline-removed-5-s-to-6-s-test-1-run-5}
+	\caption{Graph output by the analysis script.}
+	\label{fig:force-vs-time-smoothed-baseline-removed-5-s-to-6-s-test-1-run-5}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includesvg[width=3.8in]{images/graphs/force-vs-time-smoothed-baseline-removed-5-s-to-6-s-test-2-run-1}
+	\caption{Graph output by the analysis script.}
+	\label{fig:force-vs-time-smoothed-baseline-removed-5-s-to-6-s-test-2-run-1}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includesvg[width=3.8in]{images/graphs/force-vs-time-smoothed-baseline-removed-5-s-to-6-s-test-2-run-2}
+	\caption{Graph output by the analysis script.}
+	\label{fig:force-vs-time-smoothed-baseline-removed-5-s-to-6-s-test-2-run-2}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includesvg[width=3.8in]{images/graphs/force-vs-time-smoothed-baseline-removed-5-s-to-6-s-test-2-run-3}
+	\caption{Graph output by the analysis script.}
+	\label{fig:force-vs-time-smoothed-baseline-removed-5-s-to-6-s-test-2-run-3}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includesvg[width=3.8in]{images/graphs/force-vs-time-smoothed-baseline-removed-5-s-to-6-s-test-2-run-4}
+	\caption{Graph output by the analysis script.}
+	\label{fig:force-vs-time-smoothed-baseline-removed-5-s-to-6-s-test-2-run-4}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includesvg[width=3.8in]{images/graphs/force-vs-time-smoothed-baseline-removed-5-s-to-6-s-test-2-run-5}
+	\caption{Graph output by the analysis script.}
+	\label{fig:force-vs-time-smoothed-baseline-removed-5-s-to-6-s-test-2-run-5}
+\end{figure}
 
 \end{document}
